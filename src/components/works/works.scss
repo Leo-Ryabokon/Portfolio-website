@@ -1,0 +1,151 @@
+@import "../../global";
+.works {
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .arrow{
+    width: 3rem;
+    position: absolute;
+    cursor: pointer;
+
+    @include mobile{
+      display: none;
+    }
+
+    &.left{
+      left: 9rem;
+      transform: rotate(90deg);
+    }
+
+    &.right{
+      right: 9rem;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .slider{
+    height: 24rem;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+
+    @include mobile{
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container{
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .item{
+        width: 44rem;
+        height: 100%;
+        background-color: $topBarColor;
+        color: $textColor;
+        border-radius: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile{
+          width: 80%;
+          height: 8rem;
+          margin: 5px 0;
+        }
+
+
+        .left{
+          flex: 4;
+          height: 90%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .leftContainer{
+            width: 90%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.7rem 0;
+
+            @include mobile{
+              justify-content: space-around;
+            }
+
+            .imgContainer{
+              width: 3.7rem;
+              height: 3.7rem;
+              border-radius: 50%;
+              background-color: $textColor;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              @include mobile{
+                width: 2rem;
+                height: 2rem;
+              }
+
+              img{
+                width: 3rem;
+
+                @include mobile{
+                  width: 1.7rem;
+                }
+              }
+            }
+
+            h2{
+              font-size: 1.5rem;
+              text-align: center;
+
+              @include mobile{
+                font-size: 0.7rem;
+              }
+            }
+            p{
+              font-size: 1rem;
+
+              @include mobile{
+                display: none;
+              }
+            }
+            a{
+              text-decoration: none;
+              color: $textColor;
+              font-weight: 700;
+
+              @include mobile{
+                display: none;
+              }
+            }
+          }
+        }
+
+        .right{
+          flex: 8;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          img{
+            width: 40rem;
+            transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
+}

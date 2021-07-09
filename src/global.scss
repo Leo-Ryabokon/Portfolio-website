@@ -1,0 +1,14 @@
+$mainColor: #21262D;
+$textColor: #F0F6EE;
+$activeColor: #0D1117;
+$topBarColor: #161B22;
+$headingColor: #399FFF;
+$borderColor: rgba(240,246,238, 0.7);
+
+$width: 768px;
+
+@mixin mobile{
+  @media (max-width: #{$width}){
+    @content
+  }
+}

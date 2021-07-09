@@ -1,0 +1,41 @@
+@import "../../global";
+
+.menu {
+  width: 20rem;
+  height: 100vh;
+  background-color: $activeColor;
+  position: fixed;
+  top: 0;
+  right: -20rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+
+  &.active {
+    right: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $textColor;
+
+    li {
+      margin-bottom: 1rem;
+      a {
+        font-size: inherit;
+        color: inherit;
+        text-decoration: none;
+      }
+      &:hover{
+        font-weight: 700;
+      }
+    }
+  }
+}
